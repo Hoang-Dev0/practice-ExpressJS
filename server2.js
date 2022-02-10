@@ -7,6 +7,9 @@ app.get("/", (req, res, next) => {
   res.sendFile(path.join(__dirname, "home.html"));
 });
 
+app.get("/home", (req, res, next) => {
+  res.send("hello may cung");
+});
 app.use("/congkhai", express.static(path.join(__dirname, "public")));
 
 app.listen(port, () => {
